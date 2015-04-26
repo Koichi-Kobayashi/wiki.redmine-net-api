@@ -23,13 +23,13 @@ namespace RedmineTest
         {
             string host = "";
             string apiKey = "";
-
+            string issueId = "1";
             var manager = new RedmineManager(host, apiKey);
 
             //parameter - fetch associated relations.
             var parameters = new NameValueCollection {{"include", "relations"}};
       
-            var issue = manager.GetObject<Issue>("1", parameters);
+            var issue = manager.GetObject<Issue>(issueId, parameters);
             Console.WriteLine("#{0}: {1}", issue.Id, issue.Subject);
         }
     }

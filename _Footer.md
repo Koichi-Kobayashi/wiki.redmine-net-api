@@ -1,1 +1,0 @@
-![http://www.jetbrains.com/img/logos/logo_resharper.gif](http://www.jetbrains.com/img/logos/logo_resharper.gif)

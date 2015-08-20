@@ -1,4 +1,4 @@
-## Uploading a file as attachment to an issue. ## 
+## Uploading a file as attachment to an issue.
 
 #### Example: ####
 ```

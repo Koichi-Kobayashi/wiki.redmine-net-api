@@ -1,1 +1,3 @@
-Readmine .NET Api (1.0.0)
+## Readmine .NET Api (1.0.0 - pre1)
+
+* Fixed

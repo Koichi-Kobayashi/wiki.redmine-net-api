@@ -1,6 +1,5 @@
 ## Readmine .NET Api (1.0.0 - pre1)
 
-* Fixed: GetCurrentUserAsync error by adding key to async web client.
 * Fixed: Typo error in issue tests.
 * Fixed: Clone issue custom fields list.
 * Fixed: Create project issue.

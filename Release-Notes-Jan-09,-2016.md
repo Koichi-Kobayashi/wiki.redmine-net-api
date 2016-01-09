@@ -1,3 +1,18 @@
+## Readmine .NET Api (1.0.0 - pre2)
+
+* Async request refactored. 
+
+# Broken changes
+
+* Renamed AddUser to AddUserToGroup.
+* Renamed DeleteUser to DeleteUserFromGroup.
+* Renamed AddWatcher to AddWatcherToIssue.
+* Renamed RemoveWatcher to RemoveWatcherFromIssue.
+* Renamed class RedmineSerialization to RedmineSerializer.
+* ToXML &lt;T&gt;, FromXML&lt;T&gt; methods are not longer visible. 
+
+* Removed GetUsers
+
 ## Readmine .NET Api (1.0.0 - pre1)
 
 * Fixed: Typo error in issue tests.
@@ -16,17 +31,4 @@
 * Fixed: Filter users by group.
 
 * Added multiple watchers on issue
-
-* Async request refactored. 
-
-# Broken changes
-
-* Renamed AddUser to AddUserToGroup.
-* Renamed DeleteUser to DeleteUserFromGroup.
-* Renamed AddWatcher to AddWatcherToIssue.
-* Renamed RemoveWatcher to RemoveWatcherFromIssue.
-* Renamed class RedmineSerialization to RedmineSerializer.
-* ToXML &lt;T&gt;, FromXML&lt;T&gt; methods are not longer visible. 
-
-* Removed GetUsers
 

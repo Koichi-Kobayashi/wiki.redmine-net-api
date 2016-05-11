@@ -17,9 +17,9 @@ namespace RedmineTest
     {
         static void Main(string[] args)
         {
-            string host = "";
-            string apiKey = "";
-            string issueId = "1";
+            string host = "<host>";
+            string apiKey = "<api-key>";
+            string issueId = "<issue-id>";
 
             var manager = new RedmineManager(host, apiKey);
 

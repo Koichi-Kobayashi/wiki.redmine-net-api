@@ -25,7 +25,7 @@ namespace RedmineTest
             string issueId = "<issue-id>";
             var manager = new RedmineManager(host, apiKey);
 
-            manager.DeleteObject<Issue>(issueId, null);
+            manager.DeleteObject<Issue>(issueId);
         }
     }
 }

@@ -65,11 +65,9 @@ Getting the total issues that are available
 
                 //parameter - get all issues
                 var parameters = new NameValueCollection {{RedmineKeys.STATUS_ID, RedmineKeys.ALL}};
-                int totalItems;
-                var items = manager.GetObjects<Issue>(parameters, out totalItems);
+                var items = manager.GetObjects<Issue>(parameters);
 
-                Console.WriteLine("Total items: {0}", totalItems);
-                foreach (var issue in )
+                foreach (var issue in items)
                 {
                     Console.WriteLine("#{0}: {1}", issue.Id, issue.Subject);
                 }

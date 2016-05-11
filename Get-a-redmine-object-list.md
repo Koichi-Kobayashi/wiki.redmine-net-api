@@ -32,10 +32,10 @@ Example:
                var manager = new RedmineManager(host, apiKey);
 
                //parameter - get all issues
-               var parameters = new NameValueCollection {{"status_id", "*"}};
+               var parameters = new NameValueCollection {{RedmineKeys.STATUS_ID, RedmineKeys.ALL}};
 
                //parameter - fetch issues for a date range
-               parameters.Add("created_on", "><2012-03-01|2012-03-07");
+               parameters.Add(RedmineKeys.CREATED_ON, "><2012-03-01|2012-03-07");
 
                foreach (var issue in manager.GetObjects<Issue>(parameters))
                {
@@ -64,7 +64,7 @@ Getting the total issues that are available
                 var manager = new RedmineManager(host, apiKey);
 
                 //parameter - get all issues
-                var parameters = new NameValueCollection {{"status_id", "*"}};
+                var parameters = new NameValueCollection {{RedmineKeys.STATUS_ID, RedmineKeys.ALL}};
                 int totalItems;
                 var items = manager.GetObjects<Issue>(parameters, out totalItems);
 
@@ -96,7 +96,7 @@ Getting all the issues that are available:
                 var manager = new RedmineManager(host, apiKey);
 
                 //parameter - get all issues
-                var parameters = new NameValueCollection {{"status_id", "*"}};
+                var parameters = new NameValueCollection {{RedmineKeys.STATUS_ID, RedmineKeys.ALL}};
 
                 foreach (var issue in manager.GetObjects<Issue>(parameters))
                 {

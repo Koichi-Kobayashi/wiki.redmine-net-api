@@ -14,8 +14,8 @@ namespace RedmineTest
         RedmineManager redmineManager;
         static void Main(string[] args)
         {
-            string host = "";
-            string apiKey = "";
+            string host = "<host>";
+            string apiKey = "<apikey>";
             redmineManager = new RedmineManager(host, apiKey);
             UploadAttachment();
         }
@@ -23,7 +23,7 @@ namespace RedmineTest
         public static void UploadAttachment()
         {
             //read document from a specified path
-            string documentPath = "documentLocalPath";
+            string documentPath = "<document-local-path>";
             byte[] documentData = File.ReadAllBytes(documentPath);
 
             //upload attachment to redmine
@@ -39,9 +39,9 @@ namespace RedmineTest
             attachments.Add(attachment);
 
             //get project
-            var projects = redmineManager.GetObjectList<Project>(new NameValueCollection());
+            var projects = redmineManager.GetObjects<Project>(new NameValueCollection());
             var project =  projects.OfType<IdentifiableName>()
-                                   .Where(p => p.Name.Equals("your project name"))
+                                   .Where(p => p.Name.Equals("<project-name>"))
                                    .FirstOrDefault();
 
             //create issue and attach the document

@@ -27,7 +27,7 @@ namespace RedmineTest
             var manager = new RedmineManager(host, apiKey);
 
             //parameter - fetch associated relations.
-            var parameters = new NameValueCollection {{"include", "relations"}};
+            var parameters = new NameValueCollection {{RedmineKeys.INCLUDE, RedmineKeys.RELATIONS}};
       
             var issue = manager.GetObject<Issue>(issueId, parameters);
             Console.WriteLine("#{0}: {1}", issue.Id, issue.Subject);

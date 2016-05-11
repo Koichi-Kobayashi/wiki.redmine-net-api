@@ -1,0 +1,1 @@
+redmine-net-api is a library for communicating with a Redmine project management application.

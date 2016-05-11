@@ -11,4 +11,4 @@
   - [[Upload file]]
 
 ## RELEASES
-1. [[Release Notes Jan 09, 2016]]
+- [[Release Notes Jan 09, 2016]]

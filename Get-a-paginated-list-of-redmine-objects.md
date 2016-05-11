@@ -1,6 +1,6 @@
 Returns a paginated list of type T.
 
-The default page size is 25. The maximum page size is 100.
+The default page size is 25. The default maximum page size is 100.
 
 Parameters:
 
@@ -36,7 +36,7 @@ Example:
                var manager = new RedmineManager(host, apiKey);
 
                //parameter - get paginated list of issues
-               var parameters = new NameValueCollection {{RedmineKeys.STATUS_ID, "*"}, 
+               var parameters = new NameValueCollection {{RedmineKeys.STATUS_ID, RedmineKeys.ALL}, 
                                           { RedmineKeys.OFFSET, "2" }, 
                                           { RedmineKeys.LIMIT, "5" }, 
                                           { RedmineKeys.SORT, "id:desc" }};

@@ -13,20 +13,20 @@ When trying to create an object with invalid or missing attribute parameters, yo
         {
             static void Main(string[] args)
             {
-               string host = "your host";
-               string apiKey = "your api key";
+               string host = "<host>";
+               string apiKey = "<api-key>";
 
                var manager = new RedmineManager(host, apiKey);
 
                Issue issue = new Issue();
-               issue.Project = new IdentifiableName() { Id = 1 };
-               issue.Priority = new IdentifiableName() { Id = 4 };
+               issue.Project = new IdentifiableName() { Id = <project-id> };
+               issue.Priority = new IdentifiableName() { Id = <priority-id> };
                issue.Subject = "Example";
                issue.Description = "Description";
-               issue.Category = new IdentifiableName() { Id = 2 };
-               issue.Status = new IdentifiableName() { Id = 3 };
-               issue.AssignedTo = new IdentifiableName() { Id = 12 };
-               issue.ParentIssueId = 50;
+               issue.Category = new IdentifiableName() { Id = <category-id> };
+               issue.Status = new IdentifiableName() { Id = <status-id> };
+               issue.AssignedTo = new IdentifiableName() { Id = <user-id> };
+               issue.ParentIssueId = <parent-issue-id>;
 
                manager.CreateObject(issue);
 

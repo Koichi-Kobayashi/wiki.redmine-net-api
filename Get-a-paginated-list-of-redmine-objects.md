@@ -37,8 +37,8 @@ Example:
 
                //parameter - get paginated list of issues
                var parameters = new NameValueCollection {{RedmineKeys.STATUS_ID, RedmineKeys.ALL}, 
-                                          { RedmineKeys.OFFSET, "2" }, 
-                                          { RedmineKeys.LIMIT, "5" }, 
+                                          { RedmineKeys.OFFSET, "<offset>" }, 
+                                          { RedmineKeys.LIMIT, "<limit>" }, 
                                           { RedmineKeys.SORT, "id:desc" }};
 
                //parameter - fetch issues for a date range

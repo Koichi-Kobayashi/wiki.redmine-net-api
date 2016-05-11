@@ -31,8 +31,8 @@ Example:
        {
            static void Main(string[] args)
            {
-               string host = "";
-               string apiKey = "";
+               string host = "<host>";
+               string apiKey = "<api-key>";
                var manager = new RedmineManager(host, apiKey);
 
                //parameter - get paginated list of issues

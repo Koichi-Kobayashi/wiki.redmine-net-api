@@ -15,7 +15,7 @@ namespace RedmineTest
         static void Main(string[] args)
         {
             string host = "<host>";
-            string apiKey = "<apikey>";
+            string apiKey = "<api-key>";
             redmineManager = new RedmineManager(host, apiKey);
             UploadAttachment();
         }

@@ -27,8 +27,8 @@ Example:
        {
            static void Main(string[] args)
            {
-               string host = "";
-               string apiKey = "";
+               string host = "<host>";
+               string apiKey = "<api-key>";
                var manager = new RedmineManager(host, apiKey);
 
                //parameter - get all issues
@@ -45,61 +45,3 @@ Example:
          }
      }
 
-Getting the total issues that are available
-
-    using System;
-    using System.Collections.Specialized;
-    using Redmine.Net.Api;
-    using Redmine.Net.Api.Types;
-
-    namespace RedmineTest
-    {
-        class Program
-        {
-            static void Main(string[] args)
-            {
-                string host = "";
-                string apiKey = "";
-
-                var manager = new RedmineManager(host, apiKey);
-
-                //parameter - get all issues
-                var parameters = new NameValueCollection {{RedmineKeys.STATUS_ID, RedmineKeys.ALL}};
-                var items = manager.GetObjects<Issue>(parameters);
-
-                foreach (var issue in items)
-                {
-                    Console.WriteLine("#{0}: {1}", issue.Id, issue.Subject);
-                }
-            }
-        }
-    }
-
-Getting all the issues that are available:
-
-    using System;
-    using System.Collections.Specialized;
-    using Redmine.Net.Api;
-    using Redmine.Net.Api.Types;
-
-    namespace RedmineTest
-    {
-        class Program
-        {
-            static void Main(string[] args)
-            {
-                string host = "";
-                string apiKey = "";
-
-                var manager = new RedmineManager(host, apiKey);
-
-                //parameter - get all issues
-                var parameters = new NameValueCollection {{RedmineKeys.STATUS_ID, RedmineKeys.ALL}};
-
-                foreach (var issue in manager.GetObjects<Issue>(parameters))
-                {
-                    Console.WriteLine("#{0}: {1}", issue.Id, issue.Subject);
-                }
-            }
-        }
-    }

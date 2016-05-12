@@ -1,6 +1,6 @@
 ## Deleting an object of type T. ##
 
-For all the types, except the **`IssueCategories`**, of Redmine .NET Api the delete operation is straight forward. You just need to send the id of the object.
+For all the types, except the **`IssueCategories`** and **`WikiPage`**, of Redmine .NET Api the delete operation is straight forward. You just need to send the id of the object.
 
 For IssueCategories you can use the optional parameter:
   * **reassign\_to\_id**:  when there are issues assigned to the category you are deleting, this parameter lets you reassign these issues to the category with this id.

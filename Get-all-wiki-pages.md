@@ -20,7 +20,9 @@ Returns the list of all pages in a project wiki.
                var manager = new RedmineManager(host, apiKey);
 
                string projectId = "<project-id>";
-               manager.GetAllWikiPages(projectId);
+               List<WikiPage> pages = (List<WikiPage>)manager.GetAllWikiPages(projectId);
+
+
             }
          }
      }

@@ -4,6 +4,7 @@ Removes a user from a group.
 
 **Example:**
 
+```
     using System;
     using Redmine.Net.Api;
     using Redmine.Net.Api.Types;
@@ -25,3 +26,4 @@ Removes a user from a group.
            }
         }
     }
+```

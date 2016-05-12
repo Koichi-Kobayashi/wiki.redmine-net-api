@@ -1,0 +1,1 @@
+#### Remove watcher from an issue

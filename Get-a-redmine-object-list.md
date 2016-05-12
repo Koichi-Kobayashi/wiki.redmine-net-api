@@ -14,7 +14,7 @@ Optional filters: (Issue)
 * cf_x: get issues with the given value for custom field with an ID of x. (Custom field must have 'used as a filter' checked.)
 * created_on: fetch issues for a date range.
 
-Example:
+**Example:**
 
     using System;
     using System.Collections.Specialized;

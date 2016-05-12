@@ -20,7 +20,6 @@ Download attachment file.
                var manager = new RedmineManager(host, apiKey);
 
                var url = host + "/attachments/download/" + "<attachment-id>" + "/" + "<attachment-file-name>";
-
-	       var document = manager.DownloadFile(url);           
+               var document = manager.DownloadFile(url);           
         }
     }

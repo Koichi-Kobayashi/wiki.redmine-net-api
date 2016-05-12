@@ -1,6 +1,6 @@
-## Getting an object of type T. ##
+#### Getting an object of type T. ####
 
-#### Parameters: (Issue) ####
+**Parameters: (Issue)**
 
 > include: fetch associated data (optional).
 
@@ -8,7 +8,7 @@
 
 To fetch multiple associations use comma (e.g ?include=relations,journals).
 
-#### Example: ####
+**Example:**
 ```
 using System;
 using System.Collections.Specialized;

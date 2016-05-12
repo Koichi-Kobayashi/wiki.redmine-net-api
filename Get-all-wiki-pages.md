@@ -22,7 +22,10 @@ Returns the list of all pages in a project wiki.
                string projectId = "<project-id>";
                List<WikiPage> pages = (List<WikiPage>)manager.GetAllWikiPages(projectId);
 
-
+               foreach (var page in pages)
+               {
+                   Console.WriteLine("Wiki page title: ", page.Title);
+               }
             }
          }
      }

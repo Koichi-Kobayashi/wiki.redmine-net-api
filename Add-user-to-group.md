@@ -8,6 +8,7 @@ Adds an existing user to a group.
 
 **Example:**
 
+```
     using System;
     using Redmine.Net.Api;
     using Redmine.Net.Api.Types;
@@ -29,3 +30,4 @@ Adds an existing user to a group.
            }
         }
     }
+```

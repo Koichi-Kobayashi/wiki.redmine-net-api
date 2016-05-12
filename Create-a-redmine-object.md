@@ -1,7 +1,8 @@
-## Creating an object of type T. ##
+#### Creating an object of type T. ####
 
 When trying to create an object with invalid or missing attribute parameters, you will get RedmineException that contains the corresponding error messages.
 
+```
     using System;
     using System.Collections.Specialized;
     using Redmine.Net.Api;
@@ -32,3 +33,4 @@ When trying to create an object with invalid or missing attribute parameters, yo
            }
         }
     }
+```

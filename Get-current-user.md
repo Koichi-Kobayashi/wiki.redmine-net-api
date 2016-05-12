@@ -5,7 +5,6 @@ Returns the details about the user whose credentials are used to access the API.
 **Example:**
 
     using System;
-    using System.Collections.Specialized;
     using Redmine.Net.Api;
     using Redmine.Net.Api.Types;
 

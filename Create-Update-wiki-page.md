@@ -6,6 +6,7 @@ When updating an existing page, you can include a version attribute to make sure
 
 **Example:**
 
+```
     using System;
     using Redmine.Net.Api;
     using Redmine.Net.Api.Types;
@@ -34,3 +35,4 @@ When updating an existing page, you can include a version attribute to make sure
            }
         }
     }
+```

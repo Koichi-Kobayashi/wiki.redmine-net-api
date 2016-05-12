@@ -7,6 +7,7 @@ Option available for Redmine 2.3.0 and higher.
 
 **Example:**
 
+```
     using System;
     using Redmine.Net.Api;
     using Redmine.Net.Api.Types;
@@ -29,3 +30,4 @@ Option available for Redmine 2.3.0 and higher.
            }
         }
     }
+```

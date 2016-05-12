@@ -1,9 +1,8 @@
-## Updating an object of type T. ##
+#### Updating an object of type T. ####
 
 When trying to update an object with invalid or missing attribute parameters, you will get RedmineException that contains the corresponding error messages.
 
-
-#### Example: ####
+**Example:**
 
 ```
 using System;

@@ -8,7 +8,6 @@ Option available for Redmine 2.3.0 and higher.
 **Example:**
 
     using System;
-    using System.Collections.Specialized;
     using Redmine.Net.Api;
     using Redmine.Net.Api.Types;
 

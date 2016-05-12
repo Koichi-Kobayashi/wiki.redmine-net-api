@@ -1,14 +1,16 @@
+####Get a paginated list of redmine objects####
+
 Returns a paginated list of type T.
 
 The default page size is 25. The default maximum page size is 100.
 
-Parameters:
+**Parameters:**
 
 * offset: skip this number of issues in response (optional)
 * limit: number of issues per page (optional)
 * sort: column to sort with. Append :desc to invert the order.
 
-Optional filters: (Issue)
+**Optional filters: (Issue)**
 
 * project_id: get issues from the project with the given id, where the id is either project id or project identifier
 * subproject_id: get issues from the subproject with the given id. You can use project_id=XXX&subproject_id=!* to get only the issues of a given project and none of its sub projects.
@@ -18,8 +20,9 @@ Optional filters: (Issue)
 * cf_x: get issues with the given value for custom field with an ID of x. (Custom field must have 'used as a filter' checked.)
 * created_on: fetch issues for a date range.
 
-Example:
+**Example:**
 
+```
     using System;
     using System.Collections.Specialized;
     using Redmine.Net.Api;
@@ -51,3 +54,4 @@ Example:
             }
          }
      }
+```

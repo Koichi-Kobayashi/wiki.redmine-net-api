@@ -3,7 +3,7 @@
 Option available for Redmine 2.3.0 and higher.
 
 **Parameters:**
- - `user_id` (required): id of the user to add as a watcher
+ - `user_id` (required): id of the user to remove from the issue watchers list
 
 **Example:**
 

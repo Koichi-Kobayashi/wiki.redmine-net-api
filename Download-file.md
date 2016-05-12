@@ -4,6 +4,7 @@ Download attachment file.
 
 **Example:**
 
+```
     using System;
     using Redmine.Net.Api;
     using Redmine.Net.Api.Types;
@@ -23,3 +24,4 @@ Download attachment file.
                var document = manager.DownloadFile(url);           
         }
     }
+```

@@ -3,6 +3,7 @@
 Adds an existing user to a group.
 
 **Parameters:**
+
 `user_id` (required): id of the user to add to the group.
 
 **Example:**

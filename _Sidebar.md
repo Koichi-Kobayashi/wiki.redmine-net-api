@@ -1,8 +1,8 @@
 ## GETTING STARTED
 1. [[Introduction]]
 1. **CRUD Operations**
-  - [[Create a redmine object]]
   - [[Get a redmine object]]
+  - [[Create a redmine object]]
   - [[Update a redmine object]]
   - [[Delete a redmine object]]
 1. **List Operations**
@@ -20,10 +20,11 @@
     - [[Add user to group]]
     - [[Remove user from group]]
   1. **Wiki pages**
-    - [[Create or update wiki page]]
     - [[Get wiki page]]
-    - [[Delete wiki page]]
     - [[Get all wiki pages]]
-
+    - [[Create/Update wiki page]]
+    - [[Delete wiki page]]
+    
 ## RELEASES
 - [[Release Notes Jan 09, 2016]]
+- [[Release Notes - Soon]]

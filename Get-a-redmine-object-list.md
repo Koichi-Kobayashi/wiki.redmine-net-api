@@ -1,10 +1,12 @@
+####Get a redmine object list####
+
 Returns list with all objects of type T.
 
-Parameters:
+**Parameters:**
 
 * sort: column to sort with. Append :desc to invert the order.
 
-Optional filters: (Issue)
+**Optional filters: (Issue)**
 
 * project_id: get issues from the project with the given id, where the id is either project id or project identifier
 * subproject_id: get issues from the subproject with the given id. You can use project_id=XXX&subproject_id=!* to get only the issues of a given project and none of its sub projects.
@@ -16,6 +18,7 @@ Optional filters: (Issue)
 
 **Example:**
 
+```
     using System;
     using System.Collections.Specialized;
     using Redmine.Net.Api;
@@ -44,4 +47,4 @@ Optional filters: (Issue)
             }
          }
      }
-
+```

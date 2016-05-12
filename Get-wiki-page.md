@@ -7,6 +7,7 @@ Returns the details of a wiki page.
 
 **Example:**
 
+```
     using System;
     using Redmine.Net.Api;
     using Redmine.Net.Api.Types;
@@ -30,6 +31,7 @@ Returns the details of a wiki page.
            }
         }
     }
+```
 
 #### Getting an old version of a wiki page
 
@@ -40,6 +42,7 @@ Returns the details of an old version of a wiki page.
 
 **Example:**
 
+```
     using System;
     using Redmine.Net.Api;
     using Redmine.Net.Api.Types;
@@ -65,3 +68,4 @@ Returns the details of an old version of a wiki page.
            }
         }
     }
+```

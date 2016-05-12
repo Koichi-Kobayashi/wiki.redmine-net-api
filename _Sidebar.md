@@ -17,6 +17,7 @@
     - [[Remove watcher from issue]]
   1. **Users**
     - [[Get current user]]
+  1. **Groups**
     - [[Add user to group]]
     - [[Remove user from group]]
   1. **Wiki pages**

@@ -29,7 +29,6 @@ When trying to create an object with invalid or missing attribute parameters, yo
                issue.ParentIssueId = <parent-issue-id>;
 
                manager.CreateObject(issue);
-
            }
         }
     }

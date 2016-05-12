@@ -4,6 +4,7 @@ Returns the list of all pages in a project wiki.
 
 **Example:**
 
+```
     using System;
     using System.Collections.Specialized;
     using Redmine.Net.Api;
@@ -29,3 +30,4 @@ Returns the list of all pages in a project wiki.
             }
          }
      }
+```

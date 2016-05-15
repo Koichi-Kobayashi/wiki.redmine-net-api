@@ -26,6 +26,8 @@ namespace RedmineTest
             issue.Description = "Updated description"; 
 
             manager.UpdateObject(issueId ,issue);
+            var updatedIssue = manager.GetObject<Issue>(issueId, null);
+            Console.WriteLine("Updated issue: {0}.", updatedIssue);
         }
     }
 }

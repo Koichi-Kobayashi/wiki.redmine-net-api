@@ -30,7 +30,7 @@ namespace RedmineTest
             var parameters = new NameValueCollection {{RedmineKeys.INCLUDE, RedmineKeys.RELATIONS}};
       
             var issue = manager.GetObject<Issue>(issueId, parameters);
-            Console.WriteLine("#{0}: {1}", issue.Id, issue.Subject);
+            Console.WriteLine("Issue: {0}, issue);
         }
     }
 }

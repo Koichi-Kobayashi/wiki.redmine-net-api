@@ -29,7 +29,8 @@ When trying to create an object with invalid or missing attribute parameters, yo
                issue.AssignedTo = new IdentifiableName() { Id = <user-id> };
                issue.ParentIssueId = <parent-issue-id>;
 
-               manager.CreateObject(issue);
+               Issue savedIssue = manager.CreateObject(issue);
+               Console.WriteLine("Saved issue {0}." ,savedIssue);
            }
         }
     }

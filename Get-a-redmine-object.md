@@ -8,7 +8,7 @@
 
 To fetch multiple associations use comma (e.g ?include=relations,journals).
 
-**Example:**
+**Sync Example:**
 ```
 using System;
 using System.Collections.Specialized;

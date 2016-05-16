@@ -35,3 +35,36 @@ namespace RedmineTest
     }
 }
 ```
+
+**Async Example:**
+```
+using System;
+using System.Collections.Specialized;
+using Redmine.Net.Api;
+using Redmine.Net.Api.Types;
+using System.Threading.Tasks;
+
+namespace RedmineTest
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            GetObject().Wait();
+        }
+
+        public static async Task GetObject()
+        {
+            string host = "<host>";
+            string apiKey = "<api-key>";
+            string issueId = "<issue-id>";
+            var manager = new RedmineManager(host, apiKey);
+
+            var parameters = new NameValueCollection {{RedmineKeys.INCLUDE, RedmineKeys.RELATIONS}};
+      
+            var issue = await manager.GetObjectAsync<Issue>(issueId, null);
+            Console.WriteLine("Issue: {0}.", issue);
+        }
+    }
+}
+```

@@ -23,6 +23,11 @@ Removes a user from a group.
                int groupId = <group-id>;
                int userId = <user-id-to-be-removed>;
                manager.RemoveUserFromGroup(groupId, userId);
+
+               var group = manager.GetObject<Group>(groupId, 
+                                     new NameValueCollection() { { RedmineKeys.INCLUDE, RedmineKeys.USERS } });
+
+               Console.WriteLine("Group without the removed user: {0}.", group);
            }
         }
     }

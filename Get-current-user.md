@@ -21,6 +21,8 @@ Returns the details about the user whose credentials are used to access the API.
                var manager = new RedmineManager(host, apiKey);
 
                User currentUser = manager.GetCurrentUser();
+
+               Console.WriteLine("Current user: {0}.", currentUser);
            }
         }
     }

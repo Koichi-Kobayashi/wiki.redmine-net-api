@@ -83,7 +83,7 @@ namespace RedmineTest
            //parameter - fetch issues for a date range
            parameters.Add(RedmineKeys.CREATED_ON, "><2012-03-01|2012-03-07");
 
-           return manager.GetObjectsAsync<Issue>(parameters);
+           return await manager.GetObjectsAsync<Issue>(parameters);
         }
      }
  }

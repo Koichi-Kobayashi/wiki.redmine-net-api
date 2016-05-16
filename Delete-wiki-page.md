@@ -2,7 +2,7 @@
 
 Deletes a wiki page, its attachments and its history. If the deleted page is a parent page, its child pages are not deleted but changed as root pages.
 
-**Example:**
+**Sync Example:**
 
 ```
 using System;
@@ -55,4 +55,11 @@ namespace RedmineTest
         }
     }
 }
+```
+
+**Async Example:**
+```
+...
+  await manager.DeleteWikiPageAsync(projectId, wikiPageName);
+...
 ```

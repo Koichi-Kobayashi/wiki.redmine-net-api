@@ -63,6 +63,7 @@ The default page size is 25. The default maximum page size is 100.
     using System.Collections.Specialized;
     using Redmine.Net.Api;
     using Redmine.Net.Api.Types;
+    using System.Threading.Tasks;
 
     namespace RedmineTest
     {

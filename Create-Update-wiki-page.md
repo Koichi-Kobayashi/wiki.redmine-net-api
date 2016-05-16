@@ -7,23 +7,23 @@ When updating an existing page, you can include a version attribute to make sure
 **Example:**
 
 ```
-    using System;
-    using Redmine.Net.Api;
-    using Redmine.Net.Api.Types;
-    namespace RedmineTest
+using System;
+using Redmine.Net.Api;
+using Redmine.Net.Api.Types;
+namespace RedmineTest
+{
+    class Program
     {
-        class Program
+        static void Main(string[] args)
         {
-            static void Main(string[] args)
-            {
-               string host = "<host>";
-               string apiKey = "<api-key>";
+           string host = "<host>";
+           string apiKey = "<api-key>";
 
-               var manager = new RedmineManager(host, apiKey);
+           var manager = new RedmineManager(host, apiKey);
 
-               string projectId = "<project-id>";
-               string wikiPageName = "<wiki-page-name>";
-               WikiPage page = manager.CreateOrUpdateWikiPage(projectId, 
+           string projectId = "<project-id>";
+           string wikiPageName = "<wiki-page-name>";
+           WikiPage page = manager.CreateOrUpdateWikiPage(projectId, 
                                  wikiPageName, 
                                  new WikiPage 
                                      { 
@@ -33,8 +33,17 @@ When updating an existing page, you can include a version attribute to make sure
                                      }
                                  );
 
-                Console.WriteLine("WikPage details: {0}.", page);
-           }
+            Console.WriteLine("WikPage details: {0}.", page);
         }
     }
+}
+```
+
+**Async Example:**
+```
+...
+  await manager.CreateOrUpdateWikiPageAsync(projectId, 
+                              wikiPageName, 
+                              new WikiPage { Text = wikiPageUpdatedText, Comments = wikiPageComment });
+...
 ```

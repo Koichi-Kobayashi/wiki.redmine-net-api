@@ -6,33 +6,41 @@ Adds an existing user to a group.
 
 `user_id` (required): id of the user to add to the group.
 
-**Example:**
+**Sync Example:**
 
 ```
-    using System;
-    using Redmine.Net.Api;
-    using Redmine.Net.Api.Types;
+using System;
+using Redmine.Net.Api;
+using Redmine.Net.Api.Types;
 
-    namespace RedmineTest
+namespace RedmineTest
+{
+    class Program
     {
-        class Program
+        static void Main(string[] args)
         {
-            static void Main(string[] args)
-            {
-               string host = "<host>";
-               string apiKey = "<api-key>";
+           string host = "<host>";
+           string apiKey = "<api-key>";
 
-               var manager = new RedmineManager(host, apiKey);
+           var manager = new RedmineManager(host, apiKey);
 
-               int groupId = <group-id>;
-               int userId = <user-id-to-be-added>;
-               manager.AddUserToGroup(groupId, userId);
+           int groupId = <group-id>;
+           int userId = <user-id-to-be-added>;
+           manager.AddUserToGroup(groupId, userId);
 
-               var group = manager.GetObject<Group>(groupId, 
-                                    new NameValueCollection() { { RedmineKeys.INCLUDE, RedmineKeys.USERS } });
+           var group = manager.GetObject<Group>(groupId, 
+                                new NameValueCollection() { { RedmineKeys.INCLUDE, RedmineKeys.USERS } });
 
-               Console.WriteLine("Group with added user: {0}.", group);
-           }
+           Console.WriteLine("Group with added user: {0}.", group);
         }
     }
+}
+```
+
+**Async Example:**
+
+```
+...
+  await manager.AddUserToGroupAsync(groupId, userId);
+...
 ```

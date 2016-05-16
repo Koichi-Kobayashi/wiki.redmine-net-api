@@ -35,9 +35,9 @@ Get NuGet package and see wiki for examples on how to use the available function
 
 - Windows
 
-  No special configuration requiered
+  No special configuration requiered.
 
-- Mac
+- Mac OSX
 
   In Xamarin Studio click on **xUniTest-redmine-net45-api** project and chose **Options**.
 

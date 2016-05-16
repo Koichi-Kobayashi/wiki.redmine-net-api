@@ -45,13 +45,14 @@ namespace RedmineTest
 {
     class Program
     {
+        static RedmineManager manager;
         static void Main(string[] args)
         {
             string host = "<host>";
             string apiKey = "<api-key>";
             string issueId = "<issue-id>";
 
-            var manager = new RedmineManager(host, apiKey);
+            manager = new RedmineManager(host, apiKey);
 
             var updatedIssue = UpdateAsync().Result; 
             Console.WriteLine("Updated issue: {0}.", updatedIssue);

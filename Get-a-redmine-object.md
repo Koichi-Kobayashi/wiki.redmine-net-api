@@ -47,12 +47,15 @@ using System.Threading.Tasks;
 namespace RedmineTest
 {
     class Program
-    {
-        string host = "<host>";
-        string apiKey = "<api-key>";
-
+    {  
+        static RedmineManager manager;
         static void Main(string[] args)
         {
+            string host = "<host>";
+            string apiKey = "<api-key>";
+
+            manager = new RedmineManager(host, apiKey);
+
             var issue = GetObject().Result;
             Console.WriteLine("Issue: {0}.", issue);
         }
@@ -60,11 +63,10 @@ namespace RedmineTest
         public static async Task<Issue> GetObject()
         {
             string issueId = "<issue-id>";
-            var manager = new RedmineManager(host, apiKey);
-
+            
             var parameters = new NameValueCollection {{RedmineKeys.INCLUDE, RedmineKeys.RELATIONS}};
       
-            var issue = await manager.GetObjectAsync<Issue>(issueId, null);
+            var issue = await manager.GetObjectAsync<Issue>(issueId, parameters);
             return issue;
         }
     }

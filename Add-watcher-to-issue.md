@@ -5,34 +5,42 @@ Option available for Redmine 2.3.0 and higher.
 **Parameters:**
  - `user_id` (required): id of the user to add as a watcher
 
-**Example:**
+**Sync Example:**
 
 ```
-    using System;
-    using Redmine.Net.Api;
-    using Redmine.Net.Api.Types;
+using System;
+using Redmine.Net.Api;
+using Redmine.Net.Api.Types;
 
-    namespace RedmineTest
+namespace RedmineTest
+{
+    class Program
     {
-        class Program
+        static void Main(string[] args)
         {
-            static void Main(string[] args)
-            {
-               string host = "<host>";
-               string apiKey = "<api-key>";
+           string host = "<host>";
+           string apiKey = "<api-key>";
 
-               var manager = new RedmineManager(host, apiKey);
+           var manager = new RedmineManager(host, apiKey);
 
-               int watcherIssueId = <watcher-issue-id>;
-               int watcherUserId = <watcher-user-id>;
+           int watcherIssueId = <watcher-issue-id>;
+           int watcherUserId = <watcher-user-id>;
 
-               manager.AddWatcherToIssue(watcherIssueId, watcherUserId);
+           manager.AddWatcherToIssue(watcherIssueId, watcherUserId);
 
-               Issue issue = manager.GetObject<Issue>(watcherIssueId.ToString(), 
-                                    new NameValueCollection { { RedmineKeys.INCLUDE, RedmineKeys.WATCHERS } });
+           Issue issue = manager.GetObject<Issue>(watcherIssueId.ToString(), 
+                                new NameValueCollection { { RedmineKeys.INCLUDE, RedmineKeys.WATCHERS } });
 
-               Console.WriteLine("Issue with watcher: {0}.", issue);
-           }
-        }
+           Console.WriteLine("Issue with watcher: {0}.", issue);
+         }
     }
+}
+```
+
+**Async Example:**
+
+```
+...
+ await manager.AddWatcherAsync(watcherIssueId, watcherUserId);
+...
 ```

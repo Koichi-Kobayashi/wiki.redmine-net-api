@@ -32,6 +32,8 @@ When updating an existing page, you can include a version attribute to make sure
                                        Version = <wiki-page-version> 
                                      }
                                  );
+
+                Console.WriteLine("WikPage details: {0}.", page);
            }
         }
     }

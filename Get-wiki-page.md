@@ -5,7 +5,7 @@ Returns the details of a wiki page.
 **Includable:**
   - attachments
 
-**Example:**
+**Sync Example:**
 
 ```
 using System;
@@ -42,7 +42,7 @@ Returns the details of an old version of a wiki page.
 **Includable:**
   - attachments
 
-**Example:**
+**Sync Example:**
 
 ```
 using System;

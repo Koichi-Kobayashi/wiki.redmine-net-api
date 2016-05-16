@@ -41,7 +41,7 @@ Get NuGet package and see wiki for examples on how to use the available function
 
   In Xamarin Studio click on **xUniTest-redmine-net45-api** project and chose **Options**.
 
-  In the window that appears click **Custom Commands** under **Run**
+  In the window that appears select **Run** -> **Custom Commands** 
   
   Select **Execute** option and for the command field enter the following command (using your own settings):
 

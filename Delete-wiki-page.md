@@ -22,7 +22,36 @@ namespace RedmineTest
             string wikiPageName = "<wiki-page-Name>";
             var manager = new RedmineManager(host, apiKey);
 
-            manager.DeleteWikiPage(projectId, wikiPageName);
+            try
+            {
+               manager.DeleteWikiPage(projectId, wikiPageName);
+            }
+            catch(NotFoundException nfe)
+            {
+              Console.WriteLine("WikiPage not found.");
+              return;
+            }
+            catch(RedmineException rex)
+            {
+              Console.WriteLine("Delete WikiPage returned exception {0}.", rex.Message);
+              return;
+            }
+
+            try
+            { 
+              manager.GetWikiPage(projectId, null, wikiPageName)
+            }
+            catch(NotFoundException nfe)
+            {
+              Console.WriteLine("WikiPage deleted successfully.");
+              return;
+            }
+            catch(RedmineException rex)
+            {
+              Console.WriteLine("Get WikiPage returned error {0}.", rex.Message);
+              return;
+            }
+            Console.WriteLine("WikiPage was not deleted.");
         }
     }
 }

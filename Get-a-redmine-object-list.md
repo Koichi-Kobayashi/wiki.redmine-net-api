@@ -16,7 +16,7 @@ Returns list with all objects of type T.
 * `cf_x`: get issues with the given value for custom field with an ID of x. (Custom field must have 'used as a filter' checked.)
 * `created_on`: fetch issues for a date range.
 
-**Example:**
+**Sync Example:**
 
 ```
     using System;
@@ -44,6 +44,45 @@ Returns list with all objects of type T.
                {
                    Console.WriteLine("Issue: {0}.", issue);
                }
+            }
+         }
+     }
+```
+
+**Async Example:**
+
+```
+    using System;
+    using System.Collections.Specialized;
+    using Redmine.Net.Api;
+    using Redmine.Net.Api.Types;
+
+    namespace RedmineTest
+    {
+       class Program
+       {
+           static RedmineManager manager;
+           static void Main(string[] args)
+           {
+               string host = "<host>";
+               string apiKey = "<api-key>";
+               manager = new RedmineManager(host, apiKey);
+
+               foreach (var issue in GetIssues().Result)
+               {
+                   Console.WriteLine("Issue: {0}.", issue);
+               }
+            }
+
+            public static async Task<List<Issue>> GetIssues()
+            {
+               //parameter - get all issues
+               var parameters = new NameValueCollection {{RedmineKeys.STATUS_ID, RedmineKeys.ALL}};
+
+               //parameter - fetch issues for a date range
+               parameters.Add(RedmineKeys.CREATED_ON, "><2012-03-01|2012-03-07");
+
+               return manager.GetObjectsAsync<Issue>(parameters);
             }
          }
      }

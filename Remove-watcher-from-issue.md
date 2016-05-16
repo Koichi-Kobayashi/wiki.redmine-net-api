@@ -27,6 +27,11 @@ Option available for Redmine 2.3.0 and higher.
                int watcherUserId = <watcher-user-id>;
 
                manager.RemoveWatcherFromIssue(watcherIssueId, watcherUserId);
+
+               Issue issue = manager.GetObject<Issue>(watcherIssueId.ToString(), 
+                                new NameValueCollection { { RedmineKeys.INCLUDE, RedmineKeys.WATCHERS } });
+
+               Console.WriteLine("Issue without the removed watcher {0}.", issue);
            }
         }
     }

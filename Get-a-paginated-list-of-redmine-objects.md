@@ -20,7 +20,7 @@ The default page size is 25. The default maximum page size is 100.
 * `cf_x`: get issues with the given value for custom field with an ID of x. (Custom field must have 'used as a filter' checked.)
 * `created_on`: fetch issues for a date range.
 
-**Example:**
+**Sync Example:**
 
 ```
     using System;
@@ -47,11 +47,54 @@ The default page size is 25. The default maximum page size is 100.
                //parameter - fetch issues for a date range
                parameters.Add(RedmineKeys.CREATED_ON, "><2012-03-01|2012-03-07");
 
-               foreach (var issue in manager.GetPaginatedObjects<Issue>(parameters))
+               foreach (var issue in manager.GetPaginatedObjects<Issue>(parameters).Objects)
                {
                    Console.WriteLine("Issue: {0}.", issue);
                }
             }
+         }
+     }
+```
+
+**Async Example:**
+
+```
+    using System;
+    using System.Collections.Specialized;
+    using Redmine.Net.Api;
+    using Redmine.Net.Api.Types;
+
+    namespace RedmineTest
+    {
+       class Program
+       {
+           static RedmineManager manager;
+           static void Main(string[] args)
+           {
+               string host = "<host>";
+               string apiKey = "<api-key>";
+               var manager = new RedmineManager(host, apiKey);
+
+               var issues = GetPaginatedListOfIssues().Result;
+               foreach (var issue in issues.Objects)
+               {
+                   Console.WriteLine("Issue: {0}.", issue);
+               }
+            }
+
+           static async Task<PaginatedObjects<Issue>> GetPaginatedListOfIssues()
+           {
+              //parameter - get paginated list of issues
+               var parameters = new NameValueCollection {{RedmineKeys.STATUS_ID, RedmineKeys.ALL}, 
+                                          { RedmineKeys.OFFSET, "<offset>" }, 
+                                          { RedmineKeys.LIMIT, "<limit>" }, 
+                                          { RedmineKeys.SORT, "id:desc" }};
+
+               //parameter - fetch issues for a date range
+               parameters.Add(RedmineKeys.CREATED_ON, "><2012-03-01|2012-03-07");
+
+               return await manager.GetPaginatedObjectsAsync<Issue>(parameters);
+           }
          }
      }
 ```

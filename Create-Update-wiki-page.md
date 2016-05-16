@@ -4,7 +4,7 @@ Creates or updates a wiki page.
 
 When updating an existing page, you can include a version attribute to make sure that the page is a specific version when you try to update it (eg. you don't want to overwrite an update that would have been done after you retrieved the page).
 
-**Example:**
+**Sync Example:**
 
 ```
 using System;

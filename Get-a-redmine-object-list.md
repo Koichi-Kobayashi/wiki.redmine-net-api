@@ -42,7 +42,7 @@ Returns list with all objects of type T.
 
                foreach (var issue in manager.GetObjects<Issue>(parameters))
                {
-                   Console.WriteLine("#{0}: {1}", issue.Id, issue.Subject);
+                   Console.WriteLine("Issue: {0}.", issue);
                }
             }
          }

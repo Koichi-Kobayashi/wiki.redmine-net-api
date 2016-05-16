@@ -2,6 +2,7 @@
 1. [Introduction](/zapadi/redmine-net-api/wiki)
 1. [[Authentication]]
 1. [[User impersonation]]
+1. [[Using proxy]]
 1. **CRUD Operations**
   - [[Get a redmine object]]
   - [[Create a redmine object]]

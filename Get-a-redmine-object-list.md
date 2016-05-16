@@ -19,72 +19,72 @@ Returns list with all objects of type T.
 **Sync Example:**
 
 ```
-    using System;
-    using System.Collections.Specialized;
-    using Redmine.Net.Api;
-    using Redmine.Net.Api.Types;
+using System;
+using System.Collections.Specialized;
+using Redmine.Net.Api;
+using Redmine.Net.Api.Types;
 
-    namespace RedmineTest
-    {
-       class Program
+namespace RedmineTest
+{
+   class Program
+   {
+       static void Main(string[] args)
        {
-           static void Main(string[] args)
+           string host = "<host>";
+           string apiKey = "<api-key>";
+           var manager = new RedmineManager(host, apiKey);
+
+           //parameter - get all issues
+           var parameters = new NameValueCollection {{RedmineKeys.STATUS_ID, RedmineKeys.ALL}};
+
+           //parameter - fetch issues for a date range
+           parameters.Add(RedmineKeys.CREATED_ON, "><2012-03-01|2012-03-07");
+
+           foreach (var issue in manager.GetObjects<Issue>(parameters))
            {
-               string host = "<host>";
-               string apiKey = "<api-key>";
-               var manager = new RedmineManager(host, apiKey);
-
-               //parameter - get all issues
-               var parameters = new NameValueCollection {{RedmineKeys.STATUS_ID, RedmineKeys.ALL}};
-
-               //parameter - fetch issues for a date range
-               parameters.Add(RedmineKeys.CREATED_ON, "><2012-03-01|2012-03-07");
-
-               foreach (var issue in manager.GetObjects<Issue>(parameters))
-               {
-                   Console.WriteLine("Issue: {0}.", issue);
-               }
-            }
-         }
+               Console.WriteLine("Issue: {0}.", issue);
+           }
+        }
      }
+ }
 ```
 
 **Async Example:**
 
 ```
-    using System;
-    using System.Collections.Specialized;
-    using Redmine.Net.Api;
-    using Redmine.Net.Api.Types;
-    using System.Threading.Tasks;
+using System;
+using System.Collections.Specialized;
+using Redmine.Net.Api;
+using Redmine.Net.Api.Types;
+using System.Threading.Tasks;
 
-    namespace RedmineTest
-    {
-       class Program
+namespace RedmineTest
+{
+   class Program
+   {
+       static RedmineManager manager;
+       static void Main(string[] args)
        {
-           static RedmineManager manager;
-           static void Main(string[] args)
+           string host = "<host>";
+           string apiKey = "<api-key>";
+           manager = new RedmineManager(host, apiKey);
+
+           foreach (var issue in GetIssues().Result)
            {
-               string host = "<host>";
-               string apiKey = "<api-key>";
-               manager = new RedmineManager(host, apiKey);
+               Console.WriteLine("Issue: {0}.", issue);
+           }
+        }
 
-               foreach (var issue in GetIssues().Result)
-               {
-                   Console.WriteLine("Issue: {0}.", issue);
-               }
-            }
+        public static async Task<List<Issue>> GetIssues()
+        {
+           //parameter - get all issues
+           var parameters = new NameValueCollection {{RedmineKeys.STATUS_ID, RedmineKeys.ALL}};
 
-            public static async Task<List<Issue>> GetIssues()
-            {
-               //parameter - get all issues
-               var parameters = new NameValueCollection {{RedmineKeys.STATUS_ID, RedmineKeys.ALL}};
+           //parameter - fetch issues for a date range
+           parameters.Add(RedmineKeys.CREATED_ON, "><2012-03-01|2012-03-07");
 
-               //parameter - fetch issues for a date range
-               parameters.Add(RedmineKeys.CREATED_ON, "><2012-03-01|2012-03-07");
-
-               return manager.GetObjectsAsync<Issue>(parameters);
-            }
-         }
+           return manager.GetObjectsAsync<Issue>(parameters);
+        }
      }
+ }
 ```

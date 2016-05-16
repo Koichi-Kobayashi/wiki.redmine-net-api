@@ -4,8 +4,8 @@
 1. [[User impersonation]]
 1. [[Using proxy]]
 1. **CRUD Operations**
-  - [[Get a redmine object]]
   - [[Create a redmine object]]
+  - [[Get a redmine object]]
   - [[Update a redmine object]]
   - [[Delete a redmine object]]
 1. **List Operations**

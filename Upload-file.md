@@ -18,6 +18,8 @@ namespace RedmineTest
             string apiKey = "<api-key>";
             redmineManager = new RedmineManager(host, apiKey);
             UploadAttachment();
+    
+            Console.WriteLine("Attachment uploaded successfully.");
         }
      
         public static void UploadAttachment()

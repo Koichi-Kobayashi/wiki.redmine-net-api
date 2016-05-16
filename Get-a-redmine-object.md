@@ -8,7 +8,7 @@
 
 To fetch multiple associations use comma (e.g ?include=relations,journals).
 
-**Sync Example:**
+**Sync Example (Issue):**
 ```
 using System;
 using System.Collections.Specialized;
@@ -36,7 +36,7 @@ namespace RedmineTest
 }
 ```
 
-**Async Example:**
+**Async Example (Issue):**
 ```
 using System;
 using System.Collections.Specialized;

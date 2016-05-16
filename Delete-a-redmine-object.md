@@ -68,6 +68,7 @@ using System;
 using System.Collections.Specialized;
 using Redmine.Net.Api;
 using Redmine.Net.Api.Types;
+using System.Threading.Tasks;
 
 namespace RedmineTest
 {

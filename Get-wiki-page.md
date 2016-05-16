@@ -25,9 +25,11 @@ Returns the details of a wiki page.
 
                string projectId = "<project-id>";
                string wikiPageName = "<wiki-page-name>";
-               manager.GetWikiPage(projectId, 
+               WikiPage page = manager.GetWikiPage(projectId, 
                                   new NameValueCollection { { RedmineKeys.INCLUDE, RedmineKeys.ATTACHMENTS } }, 
                                   wikiPageName);
+
+               Console.WriteLine("WikPage details: {0}.", page);
            }
         }
     }
@@ -61,10 +63,12 @@ Returns the details of an old version of a wiki page.
                string projectId = "<project-id>";
                string wikiPageName = "<wiki-page-name>";
                int wikiPageVersion = <wiki-page-old-version>;
-               manager.GetWikiPage(projectId, 
+               WikiPage page = manager.GetWikiPage(projectId, 
                                   new NameValueCollection { { RedmineKeys.INCLUDE, RedmineKeys.ATTACHMENTS } }, 
                                   wikiPageName,
                                   wikiPageVersion);
+
+              Console.WriteLine("WikPage details: {0}.", page);
            }
         }
     }

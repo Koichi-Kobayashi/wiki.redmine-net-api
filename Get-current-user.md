@@ -2,28 +2,36 @@
 
 Returns the details about the user whose credentials are used to access the API.
 
-**Example:**
+**Sync Example:**
 
 ```
-    using System;
-    using Redmine.Net.Api;
-    using Redmine.Net.Api.Types;
+using System;
+using Redmine.Net.Api;
+using Redmine.Net.Api.Types;
 
-    namespace RedmineTest
+namespace RedmineTest
+{
+    class Program
     {
-        class Program
+        static void Main(string[] args)
         {
-            static void Main(string[] args)
-            {
-               string host = "<host>";
-               string apiKey = "<api-key>";
+           string host = "<host>";
+           string apiKey = "<api-key>";
 
-               var manager = new RedmineManager(host, apiKey);
+           var manager = new RedmineManager(host, apiKey);
 
-               User currentUser = manager.GetCurrentUser();
+           User currentUser = manager.GetCurrentUser();
 
-               Console.WriteLine("Current user: {0}.", currentUser);
-           }
-        }
+           Console.WriteLine("Current user: {0}.", currentUser);
+         }
     }
+}
+```
+
+**Async Example:**
+
+```
+...
+  await manager.GetCurrentUserAsync();
+...
 ```

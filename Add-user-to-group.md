@@ -27,6 +27,11 @@ Adds an existing user to a group.
                int groupId = <group-id>;
                int userId = <user-id-to-be-added>;
                manager.AddUserToGroup(groupId, userId);
+
+               var group = manager.GetObject<Group>(groupId, 
+                                    new NameValueCollection() { { RedmineKeys.INCLUDE, RedmineKeys.USERS } });
+
+               Console.WriteLine("Group with added user: {0}.", group);
            }
         }
     }

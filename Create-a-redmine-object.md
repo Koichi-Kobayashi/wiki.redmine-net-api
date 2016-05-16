@@ -50,12 +50,13 @@ When trying to create an object with invalid or missing attribute parameters, yo
     {
         class Program
         {
+            static RedmineManager manager;
             static void Main(string[] args)
             {
                string host = "<host>";
                string apiKey = "<api-key>";
 
-               var manager = new RedmineManager(host, apiKey);
+               manager = new RedmineManager(host, apiKey);
 
                Issue issue = new Issue();
                issue.Project = new IdentifiableName() { Id = <project-id> };

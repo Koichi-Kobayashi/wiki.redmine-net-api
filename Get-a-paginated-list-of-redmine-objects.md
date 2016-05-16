@@ -49,7 +49,7 @@ The default page size is 25. The default maximum page size is 100.
 
                foreach (var issue in manager.GetPaginatedObjects<Issue>(parameters))
                {
-                   Console.WriteLine("#{0}: {1}", issue.Id, issue.Subject);
+                   Console.WriteLine("Issue: {0}.", issue);
                }
             }
          }

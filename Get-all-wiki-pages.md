@@ -2,7 +2,7 @@
 
 Returns the list of all pages in a project wiki.
 
-**Example:**
+**Sync Example:**
 
 ```
 using System;

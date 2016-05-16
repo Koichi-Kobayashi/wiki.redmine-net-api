@@ -25,7 +25,7 @@ Returns the list of all pages in a project wiki.
 
                foreach (var page in pages)
                {
-                   Console.WriteLine("Wiki page title: ", page.Title);
+                   Console.WriteLine("WikPage details: {0}.", page);
                }
             }
          }

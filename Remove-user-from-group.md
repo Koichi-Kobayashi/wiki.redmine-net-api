@@ -2,33 +2,40 @@
 
 Removes a user from a group.
 
-**Example:**
+**Sync Example:**
 
 ```
-    using System;
-    using Redmine.Net.Api;
-    using Redmine.Net.Api.Types;
+using System;
+using Redmine.Net.Api;
+using Redmine.Net.Api.Types;
 
-    namespace RedmineTest
+namespace RedmineTest
+{
+    class Program
     {
-        class Program
+        static void Main(string[] args)
         {
-            static void Main(string[] args)
-            {
-               string host = "<host>";
-               string apiKey = "<api-key>";
+           string host = "<host>";
+           string apiKey = "<api-key>";
 
-               var manager = new RedmineManager(host, apiKey);
+           var manager = new RedmineManager(host, apiKey);
 
-               int groupId = <group-id>;
-               int userId = <user-id-to-be-removed>;
-               manager.RemoveUserFromGroup(groupId, userId);
+           int groupId = <group-id>;
+           int userId = <user-id-to-be-removed>;
+           manager.RemoveUserFromGroup(groupId, userId);
 
-               var group = manager.GetObject<Group>(groupId, 
-                                     new NameValueCollection() { { RedmineKeys.INCLUDE, RedmineKeys.USERS } });
+           var group = manager.GetObject<Group>(groupId, 
+                                new NameValueCollection() { { RedmineKeys.INCLUDE, RedmineKeys.USERS } });
 
-               Console.WriteLine("Group without the removed user: {0}.", group);
-           }
-        }
+           Console.WriteLine("Group without the removed user: {0}.", group);
+         }
     }
+}
+```
+
+**Async Example:**
+```
+...
+  await manager.DeleteUserFromGroupAsync(groupId, userId);
+...
 ```

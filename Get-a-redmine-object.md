@@ -48,22 +48,24 @@ namespace RedmineTest
 {
     class Program
     {
+        string host = "<host>";
+        string apiKey = "<api-key>";
+
         static void Main(string[] args)
         {
-            GetObject().Wait();
+            var issue = GetObject().Result;
+            Console.WriteLine("Issue: {0}.", issue);
         }
 
-        public static async Task GetObject()
+        public static async Task<Issue> GetObject()
         {
-            string host = "<host>";
-            string apiKey = "<api-key>";
             string issueId = "<issue-id>";
             var manager = new RedmineManager(host, apiKey);
 
             var parameters = new NameValueCollection {{RedmineKeys.INCLUDE, RedmineKeys.RELATIONS}};
       
             var issue = await manager.GetObjectAsync<Issue>(issueId, null);
-            Console.WriteLine("Issue: {0}.", issue);
+            return issue;
         }
     }
 }

@@ -56,6 +56,7 @@ Returns list with all objects of type T.
     using System.Collections.Specialized;
     using Redmine.Net.Api;
     using Redmine.Net.Api.Types;
+    using System.Threading.Tasks;
 
     namespace RedmineTest
     {

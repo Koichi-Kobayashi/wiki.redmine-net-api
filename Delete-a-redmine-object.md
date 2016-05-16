@@ -73,18 +73,19 @@ namespace RedmineTest
 {
     class Program
     {
-        string host = "<host>";
-        string apiKey = "<api-key>";
-
+        static RedmineManager manager;
         static void Main(string[] args)
         {
-             DeleteObject.Wait();   
+            string host = "<host>";
+            string apiKey = "<api-key>";
+            manager = new RedmineManager(host, apiKey);
+
+            DeleteObject.Wait();   
         }
 
         public static async Task DeleteObject()
         {
             string issueId = "<issue-id>";
-            var manager = new RedmineManager(host, apiKey);
 
             try
             {

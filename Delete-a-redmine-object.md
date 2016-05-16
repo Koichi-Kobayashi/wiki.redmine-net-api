@@ -25,8 +25,38 @@ namespace RedmineTest
             string issueId = "<issue-id>";
             var manager = new RedmineManager(host, apiKey);
 
-            manager.DeleteObject<Issue>(issueId, null);
-        }
+            try
+            {
+               manager.DeleteObject<Issue>(issueId, null);
+            }
+            catch(NotFoundException nfe)
+            {
+              Console.WriteLine("Object not found.");
+              return;
+            }
+            catch(RedmineException rex)
+            {
+              Console.WriteLine("Delete object returned exception {0}.", rex.Message);
+              return;
+            }
+
+            try
+            { 
+              manager.GetObject<Issue>(issueId, null);
+            }
+            catch(NotFoundException nfe)
+            {
+              Console.WriteLine("Object deleted successfully.");
+              return;
+            }
+            catch(RedmineException rex)
+            {
+              Console.WriteLine("Get object returned error {0}.", rex.Message);
+              return;
+            }
+
+            Console.WriteLine("Object was not deleted.");
+      }
     }
 }
 ```

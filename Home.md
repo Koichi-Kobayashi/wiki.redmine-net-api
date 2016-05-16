@@ -25,3 +25,24 @@ Resource | Read | Create | Update | Delete
  Users |x|x|x|x
  Versions |x|x|x|x
  Wiki Pages |x|x|x|x
+
+
+**How to use redmine-net-api**
+
+Get NuGet package and see wiki for examples on how to use the available functionalities.
+
+**How to run unit tests**
+
+- Windows
+
+  No special configuration requiered
+
+- Mac
+
+  In Xamarin Studio click on **xUniTest-redmine-net45-api** project and chose **Options**.
+
+  In the window that appears click **Custom Commands** under **Run**
+  
+  Select **Execute** option and for the command field enter the following command (using your own settings):
+
+  `/<path>/packages/xunit.runner.console.2.1.0/tools/xunit.console.exe ${TargetFile}`

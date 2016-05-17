@@ -39,8 +39,9 @@ Get NuGet package and see wiki for examples on how to use the available function
 
 - **Mac OSX**
 
-  In Xamarin Studio click on **xUniTest-redmine-net45-api** project and chose **Options**.
+  - **Xamarin Studio** select xUniTest-redmine-net45-api project and chose **Options**.
 
   In the window that appears select __`Run -> Custom Commands -> Execute`__ option and enter the following command (using your own settings):
 
   `/<path>/packages/xunit.runner.console.2.1.0/tools/xunit.console.exe ${TargetFile}`
+  - **Visual Studio Code**

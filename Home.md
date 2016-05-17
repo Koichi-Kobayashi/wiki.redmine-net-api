@@ -33,11 +33,11 @@ Get NuGet package and see wiki for examples on how to use the available function
 
 **How to run unit tests**
 
-- Windows
+- **Windows**
 
   No special configuration requiered.
 
-- Mac OSX
+- **Mac OSX**
 
   In Xamarin Studio click on **xUniTest-redmine-net45-api** project and chose **Options**.
 

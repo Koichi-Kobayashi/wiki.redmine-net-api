@@ -7,24 +7,24 @@ redmine-net-api is a library for communicating with a Redmine project management
 
 Resource | Read | Create | Update | Delete
 ---------|------|--------|--------|-------
- Attachments|x|x|-|-
- Custom Fields|x|-|-|-
- Enumerations  |x|-|-|-
- Groups|x|x|x|x
- Issues  |x|x|x|x
- Issue Categories|x|x|x|x
- Issue Relations|x|x|x|x
- Issue Statuses|x|-|-|-
- News|x|-|-|-
- Projects|x|x|x|x
- Project Memberships|x|x|x|x
- Queries  |x|-|-|-
- Roles |x|-|-|-
- Time Entries |x|x|x|x
- Trackers |x|-|-|-
- Users |x|x|x|x
- Versions |x|x|x|x
- Wiki Pages |x|x|x|x
+ Attachments|O|O|-|-
+ Custom Fields|O|-|-|-
+ Enumerations  |O|-|-|-
+ Groups|O|O|O|O
+ Issues  |O|O|O|O
+ Issue Categories|O|O|O|O
+ Issue Relations|O|O|O|O
+ Issue Statuses|O|-|-|-
+ News|O|-|-|-
+ Projects|O|O|O|O
+ Project Memberships|O|O|O|O
+ Queries  |O|-|-|-
+ Roles |O|-|-|-
+ Time Entries |O|O|O|O
+ Trackers |O|-|-|-
+ Users |O|O|O|O
+ Versions |O|O|O|O
+ Wiki Pages |O|O|O|O
 
 
 **How to use redmine-net-api**

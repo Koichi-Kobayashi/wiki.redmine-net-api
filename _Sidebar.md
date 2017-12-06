@@ -15,15 +15,15 @@
   1. **Attachments**
     - [[Upload file]]
     - [[Download file]]
-  1. **Issues**
+  2. **Issues**
     - [[Add watcher to issue]]
     - [[Remove watcher from issue]]
-  1. **Users**
+  3. **Users**
     - [[Get current user]]
-  1. **Groups**
+  4. **Groups**
     - [[Add user to group]]
     - [[Remove user from group]]
-  1. **Wiki pages**
+  5. **Wiki pages**
     - [[Get wiki page]]
     - [[Get all wiki pages]]
     - [[Create/Update wiki page]]

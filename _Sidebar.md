@@ -1,17 +1,17 @@
 ## GETTING STARTED
 1. [Introduction](/zapadi/redmine-net-api/wiki)
-1. [[Authentication]]
-1. [[User impersonation]]
-1. [[Using proxy]]
-1. **CRUD Operations**
+2. [[Authentication]]
+3. [[User impersonation]]
+4. [[Using proxy]]
+5. **CRUD Operations**
   - [[Create a redmine object]]
   - [[Get a redmine object]]
   - [[Update a redmine object]]
   - [[Delete a redmine object]]
-1. **List Operations**
+6. **List Operations**
   - [[Get a redmine object list]]
   - [[Get a paginated list of redmine objects]]
-1. **Specific operations**
+7. **Specific operations**
   1. **Attachments**
     - [[Upload file]]
     - [[Download file]]

@@ -10,6 +10,7 @@ Resource | Read | Create | Update | Delete
  Attachments|O|O|-|-
  Custom Fields|O|-|-|-
  Enumerations  |O|-|-|-
+ Files |O|O|-|-
  Groups|O|O|O|O
  Issues  |O|O|O|O
  Issue Categories|O|O|O|O
@@ -30,18 +31,3 @@ Resource | Read | Create | Update | Delete
 **How to use redmine-net-api**
 
 Get NuGet package and see wiki for examples on how to use the available functionalities.
-
-**How to run unit tests**
-
-- **Windows**
-
-  No special configuration requiered.
-
-- **Mac OSX**
-
-  - **Xamarin Studio** select xUniTest-redmine-net45-api project and chose **Options**.
-
-  In the window that appears select __`Run -> Custom Commands -> Execute`__ option and enter the following command (using your own settings):
-
-  `/<path>/packages/xunit.runner.console.2.1.0/tools/xunit.console.exe ${TargetFile}`
-  - **Visual Studio Code**

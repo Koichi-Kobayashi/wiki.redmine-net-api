@@ -5,8 +5,8 @@ redmine-net-api is a library for communicating with a Redmine project management
 * Supports GZipped responses from servers.
 * This API provides access and basic CRUD operations (create, read, update, delete) for the resources described below:
 
-Resource | Read | Create | Update | Delete
----------|------|--------|--------|-------
+|Resource  | Read   | Create   | Update   | Delete  |
+|:---------|:------:|:--------:|:--------:|:-------:|
  Attachments|O|O|-|-
  Custom Fields|O|-|-|-
  Enumerations  |O|-|-|-
@@ -26,7 +26,6 @@ Resource | Read | Create | Update | Delete
  Users |O|O|O|O
  Versions |O|O|O|O
  Wiki Pages |O|O|O|O
-
 
 **How to use redmine-net-api**
 

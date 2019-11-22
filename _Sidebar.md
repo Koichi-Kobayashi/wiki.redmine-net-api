@@ -30,5 +30,4 @@
     - [[Delete wiki page]]
     
 ## RELEASES
-- [[Release Notes Jan 09, 2016]]
 - [[Release Notes - Soon]]

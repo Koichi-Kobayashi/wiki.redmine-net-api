@@ -22,13 +22,13 @@ namespace RedmineTest
            var manager = new RedmineManager(host, apiKey);
 
            Issue issue = new Issue();
-           issue.Project = new IdentifiableName() { Id = <project-id> };
-           issue.Priority = new IdentifiableName() { Id = <priority-id> };
+           issue.Project = IdentifiableName.Create<IdentifiableName>(<project-id>);
+           issue.Priority = IdentifiableName.Create<IdentifiableName>(<project-id>);
            issue.Subject = "Example";
            issue.Description = "Description";
-           issue.Category = new IdentifiableName() { Id = <category-id> };
-           issue.Status = new IdentifiableName() { Id = <status-id> };
-           issue.AssignedTo = new IdentifiableName() { Id = <user-id> };
+           issue.Category = IdentifiableName.Create<IdentifiableName>(<project-id>);
+           issue.Status = IdentifiableName.Create<IdentifiableName>(<project-id>);
+           issue.AssignedTo = IdentifiableName.Create<IdentifiableName>(<project-id>);
            issue.ParentIssueId = <parent-issue-id>;
 
            Issue savedIssue = manager.CreateObject(issue);
@@ -61,13 +61,13 @@ namespace RedmineTest
            manager = new RedmineManager(host, apiKey);
 
            Issue issue = new Issue();
-           issue.Project = new IdentifiableName() { Id = <project-id> };
-           issue.Priority = new IdentifiableName() { Id = <priority-id> };
+           issue.Project = IdentifiableName.Create<IdentifiableName>(<project-id>);
+           issue.Priority = IdentifiableName.Create<IdentifiableName>(<project-id>);
            issue.Subject = "Example";
            issue.Description = "Description";
-           issue.Category = new IdentifiableName() { Id = <category-id> };
-           issue.Status = new IdentifiableName() { Id = <status-id> };
-           issue.AssignedTo = new IdentifiableName() { Id = <user-id> };
+           issue.Category = IdentifiableName.Create<IdentifiableName>(<project-id>);
+           issue.Status = IdentifiableName.Create<IdentifiableName>(<project-id>);
+           issue.AssignedTo = IdentifiableName.Create<IdentifiableName>(<project-id>);
            issue.ParentIssueId = <parent-issue-id>;
 
            Issue savedIssue = CreateIssue(issue).Result;

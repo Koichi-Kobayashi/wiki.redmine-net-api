@@ -1,5 +1,3 @@
-### Download file
-
 Download attachment file.
 
 **Sync Example:**

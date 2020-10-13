@@ -18,7 +18,7 @@ namespace RedmineTest
 
            var manager = new RedmineManager(host, apiKey);
 
-           var url = host + "/attachments/download/" + "<attachment-id>" + "/" + "<attachment-file-name>";
+           var url = $"{host}/attachments/download/{<attachment-id>}/{<attachment-file-name>}";
            var document = manager.DownloadFile(url);  
 
            if (document!= null)
@@ -44,14 +44,14 @@ namespace RedmineTest
     class Program
     {
         static RedmineManager manager;
-        static void Main(string[] args)
+        static async Task Main(string[] args)
         {
            string host = "<host>";
            string apiKey = "<api-key>";
 
            manager = new RedmineManager(host, apiKey);
 
-           var document = DownloadFileAsync().Result;
+           var document = await DownloadFileAsync();
            if (document!= null)
                Console.WriteLine("Document downloaded successfully.");
            else
@@ -60,7 +60,7 @@ namespace RedmineTest
 
         static async Task<byte[]> DownloadFileAsync()
         { 
-           var url = host + "/attachments/download/" + "<attachment-id>" + "/" + "<attachment-file-name>";
+           var url = $"{host}/attachments/download/{<attachment-id>}/{<attachment-file-name>}";
            return await manager.DownloadFileAsync(url);  
         }
     }

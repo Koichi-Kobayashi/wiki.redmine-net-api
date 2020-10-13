@@ -12,22 +12,22 @@
   - [[Get a redmine object list]]
   - [[Get a paginated list of redmine objects]]
 7. **Specific operations**
-  1. **Attachments**
-    - [[Upload file]]
-    - [[Download file]]
-  2. **Issues**
-    - [[Add watcher to issue]]
-    - [[Remove watcher from issue]]
-  3. **Users**
-    - [[Get current user]]
-  4. **Groups**
-    - [[Add user to group]]
-    - [[Remove user from group]]
-  5. **Wiki pages**
-    - [[Get wiki page]]
-    - [[Get all wiki pages]]
-    - [[Create/Update wiki page]]
-    - [[Delete wiki page]]
+  - **Attachments**
+      - [[Upload file]]
+      - [[Download file]]
+  - **Issues**
+      - [[Add watcher to issue]]
+      - [[Remove watcher from issue]]
+  - **Users**
+      - [[Get current user]]
+  - **Groups**
+      - [[Add user to group]]
+      - [[Remove user from group]]
+  - **Wiki pages**
+      - [[Get wiki page]]
+      - [[Get all wiki pages]]
+      - [[Create/Update wiki page]]
+      - [[Delete wiki page]]
     
 ## RELEASES
 - [[Release Notes - Soon]]

@@ -73,13 +73,13 @@ namespace RedmineTest
     class Program
     {
         RedmineManager manager;
-        static void Main(string[] args)
+        static async Task Main(string[] args)
         {
             string host = "<host>";
             string apiKey = "<api-key>";
             manager = new RedmineManager(host, apiKey);
 
-            UploadAttachmentAsync().Wait();
+            await UploadAttachmentAsync();
     
             Console.WriteLine("Attachment uploaded successfully.");
         }

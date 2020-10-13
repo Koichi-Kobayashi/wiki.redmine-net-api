@@ -48,7 +48,7 @@ namespace RedmineTest
     class Program
     {
         static RedmineManager manager;
-        static void Main(string[] args)
+        static async Task Main(string[] args)
         {
             string host = "<host>";
             string apiKey = "<api-key>";
@@ -56,7 +56,7 @@ namespace RedmineTest
 
             manager = new RedmineManager(host, apiKey);
 
-            var updatedIssue = UpdateAsync().Result; 
+            var updatedIssue = await UpdateAsync(); 
             Console.WriteLine("Updated issue: {0}.", updatedIssue);
         }
 

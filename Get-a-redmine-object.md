@@ -50,18 +50,18 @@ namespace RedmineTest
     class Program
     {  
         static RedmineManager manager;
-        static void Main(string[] args)
+        static async Task Main(string[] args)
         {
             string host = "<host>";
             string apiKey = "<api-key>";
 
             manager = new RedmineManager(host, apiKey);
 
-            var issue = GetObject().Result;
+            var issue = await GetIssueAsync();
             Console.WriteLine("Issue: {0}.", issue);
         }
 
-        public static async Task<Issue> GetObject()
+        public static async Task<Issue> GetIssueAsync()
         {
             string issueId = "<issue-id>";
             

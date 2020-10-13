@@ -76,16 +76,16 @@ namespace RedmineTest
     class Program
     {
         static RedmineManager manager;
-        static void Main(string[] args)
+        static async Task Main(string[] args)
         {
             string host = "<host>";
             string apiKey = "<api-key>";
             manager = new RedmineManager(host, apiKey);
 
-            DeleteObject.Wait();   
+            await DeleteIssueAsync();   
         }
 
-        public static async Task DeleteObject()
+        public static async Task DeleteIssueAsync()
         {
             string issueId = "<issue-id>";
 

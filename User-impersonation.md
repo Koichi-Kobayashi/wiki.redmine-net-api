@@ -1,4 +1,4 @@
-####User impersonation
+#### User impersonation
 
 As of Redmine 2.2.0 you can impersonate user setting user login (eg. jsmith). 
 

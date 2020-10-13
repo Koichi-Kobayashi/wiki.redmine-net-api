@@ -1,4 +1,4 @@
-####Get a paginated list of redmine objects####
+#### Get a paginated list of redmine objects
 
 Returns a paginated list of type T.
 

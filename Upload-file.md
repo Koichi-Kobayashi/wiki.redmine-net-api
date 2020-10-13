@@ -1,6 +1,6 @@
 #### Uploading a file as attachment to an issue. ####
 
-** Sync Example:**
+**Sync Example:**
 ```
 using System;
 using System.Collections.Specialized;
@@ -59,7 +59,7 @@ namespace RedmineTest
 }
 ```
 
-** Async Example:**
+**Async Example:**
 ```
 using System;
 using System.Collections.Specialized;

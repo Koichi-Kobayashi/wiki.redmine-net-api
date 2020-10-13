@@ -1,4 +1,4 @@
-####Using proxy
+#### Using proxy
 
 RedmineManager handles proxy servers.
 

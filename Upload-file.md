@@ -11,7 +11,7 @@ namespace RedmineTest
 {
     class Program
     {
-        RedmineManager redmineManager;
+        static RedmineManager redmineManager;
         static void Main(string[] args)
         {
             string host = "<host>";
@@ -72,7 +72,7 @@ namespace RedmineTest
 {
     class Program
     {
-        RedmineManager manager;
+        static RedmineManager manager;
         static async Task Main(string[] args)
         {
             string host = "<host>";

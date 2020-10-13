@@ -53,7 +53,7 @@ namespace RedmineTest
     class Program
     {
         static RedmineManager manager;
-        static void Main(string[] args)
+        static async Task Main(string[] args)
         {
            string host = "<host>";
            string apiKey = "<api-key>";
@@ -70,7 +70,7 @@ namespace RedmineTest
            issue.AssignedTo = IdentifiableName.Create<IdentifiableName>(<project-id>);
            issue.ParentIssueId = <parent-issue-id>;
 
-           Issue savedIssue = CreateIssue(issue).Result;
+           Issue savedIssue = await CreateIssue(issue);
            Console.WriteLine("Saved issue {0}." ,savedIssue);
        }
 

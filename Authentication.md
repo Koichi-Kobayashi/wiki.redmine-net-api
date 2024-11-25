@@ -10,7 +10,10 @@ The authentication can be done in 2 different ways:
 var host = "<host>";
 var login = "<login>";
 var password = "<password>";
-RedmineManager manager = new RedmineManager(host, login, password);
+var builder = RedmineManagerOptionsBuilder();
+builder.WithHost(host);
+builder.WithBasicAuthentication(login, password);
+RedmineManager manager = new RedmineManager(builder);
 ```
 
 - ApiKey
@@ -24,5 +27,8 @@ RedmineManager manager = new RedmineManager(host, login, password);
 ```
 var host = "<host>";
 var apiKey = "<api-key>";
-RedmineManager manager = new RedmineManager(host, apiKey);
+var builder = RedmineManagerOptionsBuilder();
+builder.WithHost(host);
+builder.WithApiKeyAuthentication(apiKey);
+RedmineManager manager = new RedmineManager(builder);
 ```
